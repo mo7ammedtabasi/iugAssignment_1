@@ -114,6 +114,7 @@ class MainActivity : AppCompatActivity(),OnLongClick{
         builder.setIcon(R.drawable.baseline_delete_24)
         builder.setPositiveButton("Yes"){ _: DialogInterface, _:Int->
 
+//            TODO This is where the deletion takes place
             db.collection("Contacts")
                 .document(id).delete().addOnCompleteListener {
                     contactList.clear()
